@@ -11,12 +11,6 @@ pipeline {
         stage('Install dependencies') {
             steps {
                 sh 'pwd'
-                sh 'ls -la'
-                sh 'chown -R $(id -u):$(id -g) .npm'
-                sh 'ls -la'
-                sh 'pwd'
-                sh 'whoami'
-                sh 'npm install'
             }
         }
         stage('Start the app') {
