@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Install dependencies') {
             steps {
-                sh 'npm install'
+                sh 'npm install --unsafe-perm'
             }
         }
         stage('Start the app') {
