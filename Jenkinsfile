@@ -10,8 +10,7 @@ pipeline {
         }
         stage('Install dependencies') {
             steps {
-                sh 'sudo chown -R $(whoami) ~/.npm'
-                sh 'npm install --unsafe-perm'
+                sh 'npm install'
             }
         }
         stage('Start the app') {
