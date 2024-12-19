@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Install dependencies') {
             steps {
-                sh 'mkdir -p ~/.npm && chown -R $(id -u):$(id -g) ~/.npm'
+                sh 'sudo chown -R $(whoami) ~/.npm'
                 sh 'npm install --unsafe-perm'
             }
         }
