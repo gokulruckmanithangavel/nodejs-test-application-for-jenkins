@@ -10,6 +10,7 @@ pipeline {
         }
         stage('Install dependencies') {
             steps {
+                sh 'chown -R $(whoami):$(whoami) .npm'
                 sh 'ls -la'
                 sh 'pwd'
                 sh 'whoami'
