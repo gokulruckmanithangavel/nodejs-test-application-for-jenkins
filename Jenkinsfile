@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Install dependencies') {
             steps {
-                sh 'npm config set cache $(pwd)/.npm-cache --global'
+                sh 'mkdir -p ~/.npm && chown -R $(id -u):$(id -g) ~/.npm'
                 sh 'npm install --unsafe-perm'
             }
         }
