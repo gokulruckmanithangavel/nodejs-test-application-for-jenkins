@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Install dependencies') {
             steps {
-                sh 'pwd'
+                sh 'npm install'
             }
         }
         stage('Start the app') {
