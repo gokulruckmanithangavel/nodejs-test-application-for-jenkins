@@ -12,6 +12,7 @@ pipeline {
             steps {
                 sh '''
                 mkdir -p $WORKSPACE/.npm
+                npm config --userconfig=/var/lib/jenkins/workspace/test/.npmrc set cache /var/lib/jenkins/workspace/test/.npm
                 npm config set cache $WORKSPACE/.npm
                 npm install
                 '''
