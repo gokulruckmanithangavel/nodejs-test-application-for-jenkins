@@ -10,9 +10,11 @@ pipeline {
         }
         stage('Install dependencies') {
             steps {
-                sh 'pwd'
-                sh 'ls -la'
-                sh 'npm install'
+                sh '''
+                mkdir -p $WORKSPACE/.npm
+                npm config set cache $WORKSPACE/.npm
+                npm install
+                '''
             }
         }
         stage('Start the app') {
