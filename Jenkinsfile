@@ -18,10 +18,5 @@ pipeline {
                 '''
             }
         }
-        stage('Start the app') {
-            steps {
-                sh 'npm start'
-            }
-        }
     }
 }
